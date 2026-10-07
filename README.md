@@ -6,6 +6,6 @@ This project analyzes customer purchasing behavior to segment customers and pred
 ## Dataset Source
 The project uses the **Online Retail Dataset** from the UCI Machine Learning Repository. It contains transactional data for a UK-based non-store online retail occurring between 01/12/2010 and 09/12/2011.
 
-- **Source:** [UCI Machine Learning Repository - Online Retail](https://archive.ics.uci.edu/ml/datasets/Online+Retail)
+- **Source:** [UCI Machine Learning Repository - Online Retail](https:/archive.ics.uci.edu/ml/datasets/Online+Retail)
 
 *Note: The dataset does not contain demographic information, website visits, or app interaction data. All insights are derived strictly from transactional history (invoices, stock codes, descriptions, quantities, invoice dates, unit prices, and customer IDs).*

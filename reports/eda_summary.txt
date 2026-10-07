@@ -1,0 +1,38 @@
+=========================================================
+EXPLORATORY DATA ANALYSIS SUMMARY
+=========================================================
+
+--- Overall Metrics ---
+Date Coverage: 2010-12-01 to 2011-12-09
+Total Customers: 4,338
+Total Invoices: 18,532
+Total Sales Revenue: £8,887,208.89
+
+--- Customer Behavior Metrics ---
+Average Spend per Customer: £2,048.69
+Median Spend per Customer: £668.57
+Average Orders per Customer: 4.27
+Median Orders per Customer: 2.00
+Overall Average Order Value (AOV): £479.56
+Overall Median Order Value: £302.57
+
+--- One-Time vs Repeat Customers ---
+One-Time Customers: 1,493 (34.4%)
+Repeat Customers:   2,845 (65.6%)
+
+Spending Breakdown (Total Spend):
+              count         mean   median
+CustomerType                             
+One-Time       1493   411.245520   255.91
+Repeat         2845  2907.985706  1154.47
+
+--- Statistical Test: Mann-Whitney U Test ---
+Comparison: Average Order Value (AOV) between One-Time and Repeat customers.
+Reasoning: Financial data (like Order Values) is highly right-skewed, meaning the mean is pulled upwards by extreme outliers. The Mann-Whitney U test is a non-parametric test that compares the medians/distributions without assuming a normal distribution, making it robust to these outliers.
+Null Hypothesis: There is no difference in the underlying distribution of AOV between one-time and repeat customers.
+
+Result: U-statistic = 1,856,169.50, p-value = 8.5600e-12
+
+Conclusion: The p-value is strictly less than 0.05, so we reject the null hypothesis. There is a statistically significant difference in the average order value between one-time and repeat customers.
+
+Limitations: This test simply observes a difference in distributions; it does NOT prove causation. It does not mean that forcing someone to buy a second time will inherently change how much they spend per order. Additionally, the definition of a 'one-time' customer is constrained by our 1-year data window; they may have purchased before or after this period.
